@@ -83,7 +83,7 @@ const Navbar = () => {
                 About
               </NavLink>
               <NavLink
-                to={"/"}
+                to={"/portofolio"}
                 className={({ isActive }) =>
                   isActive
                     ? "text-white after:content-[''] after:bottom-0 after:h-[5px] after:bg-custom-brown after:absolute after:rounded-full relative pb-2 hover:after:w-[5px] active:after:w-[15px] after:transition-all after:duration-500 after:left-1/2 after:-translate-x-1/2 after:w-full after:left-0 after:right-0 after:transition-all after:duration-500"
@@ -110,10 +110,10 @@ const Navbar = () => {
                     <NavLink to="/" className="text-zinc-800">
                       Home
                     </NavLink>
-                    <NavLink to="/" className="text-zinc-800">
+                    <NavLink to="/about" className="text-zinc-800">
                       About
                     </NavLink>
-                    <NavLink to="/" className="text-zinc-800">
+                    <NavLink to="/portofolio" className="text-zinc-800">
                       Portofolio
                     </NavLink>
                   </div>

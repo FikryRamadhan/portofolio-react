@@ -81,7 +81,7 @@ const dataProject = [
         id: 7, 
         title: "Food Xyz", 
         desc: "This application desktop for monitoring sales in company", 
-        type: "desktop", 
+        type: "dekstop", 
         image: "/project/food-xyz.png", 
         createdAt: "2024-04-10",
         details: {

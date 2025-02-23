@@ -16,7 +16,7 @@ const LastProject = () => {
         return projectDate >= oneYearAgo && projectDate <= currentDate;
     });
 
-    const projectTypes = ['all', 'web', 'mobile', 'design'];
+    const projectTypes = ['all', 'web','bot','dekstop', 'mobile', 'design'];
 
     const items = filteredProjects.slice(0, 6);
 
@@ -28,11 +28,11 @@ const LastProject = () => {
     });
 
     return (
-        <div className="p-10 lg:py-20">
+        <div className="p-10 lg:pl-30 lg:pr-30">
             <h1 className="text-4xl font-bold text-center mb-6 text-slate-100">Last Project</h1>
 
             {/* Search & Filter */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 lg:pl-30 lg:pr-30">
                 {/* Search Input */}
                 <input
                     type="text"

@@ -1,8 +1,13 @@
 import React from 'react'
+import Project from '../Section/Portofolio/Project'
 
 const Portofolio = () => {
   return (
-    <div>Portofolio</div>
+    <>
+        <div className="bg-black pt-20">
+            <Project />
+        </div>
+    </>
   )
 }
 
