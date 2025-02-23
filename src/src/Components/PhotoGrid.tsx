@@ -1,17 +1,17 @@
 import React from 'react';
 
 const photos = [
-    '/logo/2.png',
-    '/logo/11.png',
-    '/logo/7.png',
-    '/logo/5.png',
-    '/logo/1.png',
-    '/logo/3.png',
-    '/logo/9.png',
-    '/logo/4.png',
-    '/logo/8.png',
-    '/logo/6.png',
-    '/logo/10.png',
+    'images/logo/2.png',
+    'images/logo/11.png',
+    'images/logo/7.png',
+    'images/logo/5.png',
+    'images/logo/1.png',
+    'images/logo/3.png',
+    'images/logo/9.png',
+    'images/logo/4.png',
+    'images/logo/8.png',
+    'images/logo/6.png',
+    'images/logo/10.png',
 ];
 
 const PhotoGrid = () => {
