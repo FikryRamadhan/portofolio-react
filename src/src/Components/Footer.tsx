@@ -16,7 +16,7 @@ const Footer = () => {
                         <ul className="text-slate-300 text-sm">
                             <li>
                                 <a
-                                    href="#"
+                                    href="/"
                                     className="inline-block text-base hover:text-primary mb-3"
                                 >
                                     Home
@@ -24,7 +24,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="/about"
                                     className="inline-block text-base hover:text-primary mb-3"
                                 >
                                     About
@@ -32,7 +32,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="/portofolio"
                                     className="inline-block text-base hover:text-primary mb-3"
                                 >
                                     Portofolio
