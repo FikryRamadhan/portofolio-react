@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+.kanit-semibold {
+    font-family: "Kanit", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.kanit-light {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+        /* Geser ke kiri sepanjang lebar container */
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll div {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.animate-scroll div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animate-scroll div:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.animate-scroll div:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.animate-scroll div:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.animate-scroll div:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.animate-scroll div:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.animate-scroll div:nth-child(7) {
+    animation-delay: 3s;
+}
+
+.animate-scroll div:nth-child(8) {
+    animation-delay: 3.5s;
+}
