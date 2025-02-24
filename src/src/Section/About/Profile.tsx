@@ -30,7 +30,7 @@ const Profile = () => {
                 </div>
                 <div className=" lg:w-1/3 lg:pl-10">
                     <img
-                        src="/public/images/fikry.png"
+                        src="/images/fikry.png"
                         alt="E-Learning Illustration"
                         className="lg:ml-auto"
                     />

@@ -7,14 +7,16 @@ const dataProject = [
         image: "/project/operational.png", 
         createdAt: "2024-11-15",
         details: {
-            techStack: ["React", "Node.js", "PostgreSQL"], 
+            techStack: ["Laravel", "MySql", "JQuery"], 
             client: "PT-Adiva Sumber Solusi", 
-            description: "Aplikasi web untuk manajemen operasional internal di PT-Adiva Sumber Solusi, membantu mengelola data karyawan, keuangan, dan inventaris secara efisien." 
+            description: "Aplikasi web untuk manajemen operasional internal di PT-Adiva Sumber Solusi, membantu mengelola data karyawan, keuangan, dan inventaris secara efisien.",
+            repo: 'https://github.com/FikryRamadhan/operational-app'
         }
+        
     },
     { 
         id: 2, 
-        title: "Bot telegram For Analisa Crypto AI", 
+        title: "Bot telegram For Analisa Crypto with AI", 
         desc: "This Project for analisa crypto with thunderflow/node for create model ai in node js ", 
         type: "bot", 
         image: "/project/bot-tele.png", 
@@ -22,7 +24,8 @@ const dataProject = [
         details: {
             techStack: ["Node.js", "Telegraf.js", "TensorFlow.js"], 
             client: "Internal", 
-            description: "Bot Telegram berbasis AI untuk analisa tren harga crypto menggunakan machine learning dengan TensorFlow.js di dalam Node.js."
+            description: "Bot Telegram berbasis AI untuk analisa tren harga crypto menggunakan machine learning dengan TensorFlow.js di dalam Node.js.",
+            repo: 'https://github.com/FikryRamadhan/Bot-AI-Treding'
         } 
     },
     { 
@@ -33,8 +36,9 @@ const dataProject = [
         image: "/project/traveloop.png", 
         createdAt: "2024-12-22",
         details: {
-            techStack: ["Next.js", "MongoDB", "Tailwind CSS"], 
-            client: "Traveloop Indonesia", 
+            techStack: ["Laravel", "jQuery", "MySql"], 
+            client: "Johe", 
+            repo: 'https://github.com/joheee/Traveloop.git',
             description: "Platform reservasi hotel berbasis web yang memungkinkan pengguna mencari dan memesan hotel terbaik di Indonesia."
         } 
     },
@@ -46,8 +50,9 @@ const dataProject = [
         image: "/project/spicy.png", 
         createdAt: "2024-05-20",
         details: {
-            techStack: ["Laravel", "Vue.js", "MySQL"], 
+            techStack: ["HTML", "CSS", "JS"], 
             client: "SMK Pertiwi Kuningan", 
+            repo: 'https://github.com/FikryRamadhan/SPW',
             description: "Marketplace UMKM untuk memfasilitasi penjualan produk lokal dari stand sekolah SMK Pertiwi Kuningan."
         } 
     },
@@ -59,8 +64,9 @@ const dataProject = [
         image: "/project/survey-app.png", 
         createdAt: "2025-01-05",
         details: {
-            techStack: ["Flutter", "Firebase", "Google Maps API"], 
-            client: "Pemerintah Kuningan", 
+            techStack: ["Laravel", "Tailwind", "MySql"], 
+            client: "Private Client", 
+            repo: 'https://github.com/FikryRamadhan/Survey-app',
             description: "Aplikasi survei berbasis mobile yang digunakan untuk penelitian dan pengumpulan data di Kota Kuningan."
         } 
     },
@@ -72,21 +78,23 @@ const dataProject = [
         image: "/project/p2d.png", 
         createdAt: "2025-02-10",
         details: {
-            techStack: ["Django", "React", "PostgreSQL"], 
-            client: "Dinas Kesehatan", 
+            techStack: ["Laravel Filament", "React", "Tailwind"], 
+            client: "Desa.Muncangela", 
+            repo: 'https://github.com/MrFatra/p2d-fe', 
             description: "Aplikasi untuk monitoring pertumbuhan anak dengan catatan kesehatan dan status gizi."
         } 
     },
     { 
         id: 7, 
         title: "Food Xyz", 
-        desc: "This application desktop for monitoring sales in company", 
+        desc: "This application desktop and mobile for monitoring sales in company", 
         type: "dekstop", 
         image: "/project/food-xyz.png", 
         createdAt: "2024-04-10",
         details: {
-            techStack: ["Electron.js", "SQLite"], 
-            client: "XYZ Food Company", 
+            techStack: ["VB.Net", "SQL Server", "java"], 
+            client: "LKS 2024 Competition",
+            repo: 'https://github.com/FikryRamadhan/LaporanPenjualanApk',
             description: "Aplikasi desktop untuk memantau dan menganalisis penjualan makanan dalam perusahaan XYZ."
         } 
     },
@@ -98,8 +106,9 @@ const dataProject = [
         image: "/project/weeb-galeri.png", 
         createdAt: "2024-01-10",
         details: {
-            techStack: ["PHP", "Bootstrap", "MySQL"], 
-            client: "Galeri Seni Lokal", 
+            techStack: ["Laravel", "Bootstrap", "MySQL"], 
+            client: "Private Client", 
+            repo: '-',
             description: "Website galeri digital untuk menampilkan dan menjual karya seni dari berbagai seniman lokal."
         } 
     },
@@ -112,7 +121,8 @@ const dataProject = [
         createdAt: "2024-06-10",
         details: {
             techStack: ["CodeIgniter", "MySQL"], 
-            client: "Dinas Pertanian", 
+            client: "Private Client", 
+            repo: 'https://github.com/FikryRamadhan/arsip-surat',
             description: "Sistem arsip digital untuk menyimpan dan mengelola dokumen di Dinas Pertanian."
         } 
     },
@@ -124,8 +134,9 @@ const dataProject = [
         image: "/project/e-lope.png", 
         createdAt: "2025-02-10",
         details: {
-            techStack: ["Next.js", "Express.js", "MongoDB"], 
-            client: "Internal Project", 
+            techStack: ["React ", "Laravel", "MySql"], 
+            client: "Internal Project for Competition", 
+            repo: 'https://github.com/Alope-Community/ICF_TEAM2_E-Learning_FE',
             description: "Platform e-learning berbasis web yang menyediakan materi coding, diskusi, dan latihan langsung dalam satu sistem."
         } 
     },
@@ -139,6 +150,7 @@ const dataProject = [
         details: {
             techStack: ["Node.js", "Express.js", "Swagger API"], 
             client: "Internal Development", 
+            repo: '-' ,
             description: "API untuk menyediakan layanan data yang dapat digunakan dalam berbagai aplikasi internal."
         } 
     },
