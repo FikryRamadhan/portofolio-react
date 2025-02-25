@@ -167,7 +167,7 @@ const Project = () => {
         <div className="m-0 font-sans  transition-all duration-500 z-50">
           <div
             ref={sidebarRef}
-            className="fixed h-full w-[400px] top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"
+            className="fixed h-full w-[300px] top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"
           >
             <DetailProject {...dataDetail} />
           </div>
