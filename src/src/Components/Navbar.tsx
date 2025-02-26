@@ -98,7 +98,7 @@ const Navbar = () => {
               >
                 Portofolio
               </NavLink>
-              <button onClick={toggleSidebar} className="text-white cursor-pointer">
+              <button onClick={toggleSidebar} className="text-white cursor-pointer sm:hidden md:hidden">
                 <IconInbox></IconInbox>
               </button>
             </div>
@@ -133,7 +133,7 @@ const Navbar = () => {
                 <IconMenu2></IconMenu2>
               </button>
             )}
-            <button onClick={toggleSidebar} className="text-white ml-4">
+            <button onClick={toggleSidebar} className="text-white ml-2">
               <IconInbox></IconInbox>
             </button>
           </div>
