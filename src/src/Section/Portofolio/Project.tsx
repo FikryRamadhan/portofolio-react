@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import dataProject from "../../Hooks/DataProject";
 import dataSertifikasi from "../../Hooks/DataSertifikasi"; // Data sertifikasi
 import DetailProject from "./DetailProject";
+import DetailSertifikat from "./DetailSertifikat";
 
 const Project = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -70,13 +71,6 @@ const Project = () => {
             }`}
         >
           Sertifikasi
-        </button>
-        <button
-          onClick={() => setActiveTab("sertifikasi")}
-          className={`px-4 py-2 text-lg font-semibold rounded-md mx-2 transition-all ${activeTab === "sertifikasi" ? "bg-custom-brown text-white" : "bg-zinc-800 text-gray-300"
-            }`}
-        >
-          Career
         </button>
       </div>
 
@@ -167,9 +161,13 @@ const Project = () => {
         <div className="m-0 font-sans  transition-all duration-500 z-50">
           <div
             ref={sidebarRef}
-            className="fixed h-full w-[400px] top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"
+            className="fixed h-full max-sm:w-[300px] w-[400px]  top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"
           >
-            <DetailProject {...dataDetail} />
+           {activeTab === "project" ? (
+             <DetailProject {...dataDetail} />
+           ) : (
+              <DetailSertifikat {...dataDetail}/>
+           )}
           </div>
           <div
             className="fixed inset-0 bg-black/50 z-40"

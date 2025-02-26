@@ -1,24 +1,19 @@
 const dataSertifikasi = [
     {
       id: 1,
-      title: "AWS Certified Solutions Architect",
-      desc: "Sertifikasi resmi dari Amazon Web Services untuk arsitektur cloud.",
-      type: "cloud",
-      image: "/certifications/aws-certified.png",
+      title: "3rd place national level at UPN Veteran Jawa Timur ",
+      desc: "Sertifikasi resmi dari UPN veteran Jawa Timur Juara 3 Web Develepor.",
+      tingkat: "Nasional",
+      type: "Website",
+      image: "/sertifikat/ICF.png",
     },
     {
       id: 2,
-      title: "Google Associate Android Developer",
-      desc: "Sertifikasi resmi dari Google untuk pengembang Android.",
-      type: "mobile",
-      image: "/certifications/google-android.png",
-    },
-    {
-      id: 3,
-      title: "Cisco Certified Network Associate (CCNA)",
-      desc: "Sertifikasi jaringan dari Cisco untuk networking fundamental.",
-      type: "networking",
-      image: "/certifications/cisco-ccna.png",
+      title: "Lomba IT Solution For Businnes",
+      desc: "Sertifikasi resmi dari Pemerintah provinsi jawa barat.",
+      tingkat: "Provinsi",
+      type: "Dekstop And Mobile",
+      image: "/sertifikat/LKS.jpg",
     },
   ];
   

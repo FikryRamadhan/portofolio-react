@@ -32,7 +32,6 @@ const PhotoGrid = () => {
                         <img src={photo} alt={`Photo ${index + initialPhotos.length}`} className="w-1/2 h-1/2 object-cover rounded-lg" />
                     </div>
                 ))}
-
             </div>
         </div>
     );
