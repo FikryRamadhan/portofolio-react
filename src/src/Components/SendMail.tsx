@@ -84,7 +84,7 @@ const SendMail = () => {
                     <input
                         type="Email"
                         placeholder="Email"
-                        value={username}
+                        value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="w-full px-4 py-2 border rounded-sm focus:outline-none focus:ring-1 focus:ring-zinc-900"
                         required
@@ -94,7 +94,7 @@ const SendMail = () => {
                 <input
                     type="Your Name"
                     placeholder="Your Name"
-                    value={email}
+                    value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     className="w-full px-4 py-2 border rounded-sm focus:outline-none focus:ring-1 focus:ring-zinc-900 "
                     required
