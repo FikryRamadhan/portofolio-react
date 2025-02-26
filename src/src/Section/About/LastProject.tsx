@@ -1,6 +1,8 @@
 import { IconFilter } from '@tabler/icons-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import dataProject from '../../Hooks/DataProject';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const LastProject = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -27,9 +29,13 @@ const LastProject = () => {
         return matchesSearch && matchesType;
     });
 
+    useEffect(() => {
+        AOS.init()
+    },[])
+
     return (
         <div className="p-10 lg:pl-30 lg:pr-30">
-            <h1 className="text-4xl font-bold text-center mb-6 text-slate-100">Last Project</h1>
+            <h1 className="text-4xl font-bold text-center mb-6 text-slate-100" data-aos="fade-up">Last Project</h1>
 
             {/* Search & Filter */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8 lg:pl-30 lg:pr-30">
@@ -40,6 +46,7 @@ const LastProject = () => {
                     className="w-full md:w-2/3 p-3 rounded-lg bg-zinc-800 text-slate-100 border border-zinc-700 focus:outline-none focus:border-blue-500"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    data-aos="fade-left"
                 />
 
                 {/* Filter Dropdown */}
@@ -47,6 +54,7 @@ const LastProject = () => {
                     <button
                         className="flex items-start gap-2 px-4 py-2 bg-zinc-800 text-slate-300 rounded-lg hover:bg-zinc-700"
                         onClick={() => setIsFilterOpen(!isFilterOpen)}
+                        data-aos="fade-right"
                     >
                         <IconFilter size={20} /> Filter
                     </button>
@@ -73,6 +81,7 @@ const LastProject = () => {
                         <div
                             key={item.id}
                             className="p-4 bg-zinc-950 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
+                            data-aos="fade-up"
                         >
                             <div className="text-center">
                                 <img

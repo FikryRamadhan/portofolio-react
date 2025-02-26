@@ -1,4 +1,11 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Hero = () => {
+    useEffect(()=> {
+        AOS.init()
+    })
     return (
         <>
             <div className="h-150 flex flex-col justify-center items-center relative overflow-hidden">
@@ -10,7 +17,7 @@ const Hero = () => {
                 />
 
                 {/* Teks di atas gambar */}
-                <div className="text-center relative z-10 p-8 mt-24 rounded-lg">
+                <div className="text-center relative z-10 p-8 mt-24 rounded-lg" data-aos="fade-up">
                     <h1 className="text-5xl font-bold mb-4 text-white kanit-semibold">I'm a creative freelancer</h1>
                     <h2 className="text-3xl font-semibold mb-6 text-white">based in Indonesia</h2>
                     <p className="text-xl max-w-2xl mx-auto mt-[-15px] text-white">

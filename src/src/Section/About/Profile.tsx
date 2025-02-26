@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Profile = () => {
+    useEffect(() => {
+        AOS.init()
+    }, [])
     return (
         <div className="min-h-screen bg-black text-white flex  items-center justify-center p-10 lg:p-30">
             <div className="gap-8 justify-center flex  flex-wrap-reverse lg:flex-wrap items-center px-6 lg:px-20">
                 {/* Konten Teks */}
                 <div className="w-full self-center lg:w-1/2 text-white">
-                    <h1 className="text-2xl md:text-xl lg:text-3xl mb-2 mt-20">
+                    <h1 className="text-2xl md:text-xl lg:text-3xl mb-2 mt-20" data-aos="fade-right">
                         Fikry Ramadhan
                     </h1>
-                    <p className=" leading-relaxed  text-white lg:text-sm">
+                    <p className=" leading-relaxed  text-white lg:text-sm" data-aos="fade-left">
                         I am a freelancer with expertise in Web Development. With over a year of experience in the industry, I have
                         successfully worked on various projects for diverse clients, creating
                         innovative and efficient digital solutions. My skills include
@@ -28,7 +33,7 @@ const Profile = () => {
                         satisfying experience for clients and achieving outstanding results.
                     </p>
                 </div>
-                <div className=" lg:w-1/3 lg:pl-10">
+                <div className=" lg:w-1/3 lg:pl-10" data-aos="fade-down">
                     <img
                         src="/images/fikry.png"
                         alt="E-Learning Illustration"

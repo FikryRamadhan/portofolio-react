@@ -4,6 +4,8 @@ import dataProject from "../../Hooks/DataProject";
 import dataSertifikasi from "../../Hooks/DataSertifikasi"; // Data sertifikasi
 import DetailProject from "./DetailProject";
 import DetailSertifikat from "./DetailSertifikat";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Project = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,6 +47,9 @@ const Project = () => {
     setOpenSidebar(!isOpenSidebar);
   }
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
   
 
   const handleProjectClick = (data) => {
@@ -54,12 +59,13 @@ const Project = () => {
 
   return (
     <div className="p-10 lg:pl-30 lg:pr-30">
-      <h1 className="text-4xl font-bold text-center mb-6 text-slate-100">Portofolio</h1>
+      <h1 className="text-4xl font-bold text-center mb-6 text-slate-100"  data-aos="fade-up">Portofolio</h1>
 
       {/* Tab Menu */}
       <div className="flex justify-center mb-6 ">
         <button
           onClick={() => setActiveTab("project")}
+           data-aos="fade-left"
           className={`px-4 py-2 text-lg font-semibold rounded-md mx-2 transition-all ${activeTab === "project" ? "bg-custom-brown text-white" : "bg-zinc-800 text-gray-300"
             }`}
         >
@@ -67,6 +73,7 @@ const Project = () => {
         </button>
         <button
           onClick={() => setActiveTab("sertifikasi")}
+           data-aos="fade-right"
           className={`px-4 py-2 text-lg font-semibold rounded-md mx-2 transition-all ${activeTab === "sertifikasi" ? "bg-custom-brown text-white" : "bg-zinc-800 text-gray-300"
             }`}
         >
@@ -82,6 +89,7 @@ const Project = () => {
           placeholder={`Search ${activeTab}...`}
           className="w-full md:w-2/3 p-3 rounded-lg bg-zinc-800 text-slate-100 border border-zinc-700 focus:outline-none focus:border-blue-500"
           value={searchTerm}
+           data-aos="fade-up"
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
@@ -91,6 +99,7 @@ const Project = () => {
             <button
               className="flex items-center gap-2 px-4 py-2 bg-zinc-800 text-slate-300 rounded-lg hover:bg-zinc-700"
               onClick={() => setIsFilterOpen(!isFilterOpen)}
+               data-aos="fade-up"
             >
               <IconFilter size={20} /> Filter
             </button>
@@ -116,13 +125,14 @@ const Project = () => {
       </div>
 
       {/* List Project / Sertifikasi */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 " data-aos="fade-up">
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
             <div
               key={item.id}
               className="p-4 bg-zinc-950 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg cursor-pointer"
-              onClick={() => handleProjectClick(item)} // Tambahkan event onClick
+              onClick={() => handleProjectClick(item)} 
+              data-aos="fade-up"// Tambahkan event onClick
             >
               <div className="text-center">
                 <img
@@ -150,7 +160,7 @@ const Project = () => {
             </div>
           ))
         ) : (
-          <div className="text-slate-300 text-center py-12 col-span-full">
+          <div className="text-slate-300 text-center py-12 col-span-full"  data-aos="fade-up">
             Tidak ada data yang ditemukan
           </div>
         )}
@@ -158,7 +168,7 @@ const Project = () => {
       </div>
 
       {isOpenSidebar && (
-        <div className="m-0 font-sans  transition-all duration-500 z-50">
+        <div className="m-0 font-sans  transition-all duration-500 z-50" >
           <div
             ref={sidebarRef}
             className="fixed h-full max-sm:w-[300px] w-[400px]  top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"

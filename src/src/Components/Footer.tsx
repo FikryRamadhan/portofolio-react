@@ -1,7 +1,15 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 const Footer = () => {
+    useEffect(() => {
+        AOS.init()
+    },[])
+
     return (
         <div className="pt-24 pb-12 bg-black">
-            <div className="container">
+            <div className="container" data-aos="fade-up">
                 <div className="flex flex-wrap items-center justify-center lg:ml-44">
                     <div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
                         <h2 className="font-bold text-4xl text-white mb-5"></h2>

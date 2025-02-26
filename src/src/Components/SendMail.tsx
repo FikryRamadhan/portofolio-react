@@ -1,5 +1,6 @@
 import { IconBrandGmail, IconBrandWhatsapp } from '@tabler/icons-react';
 import React, { useState } from 'react'
+import emailjs from "emailjs-com";
 
 const SendMail = () => {
     const [isWhatsapp, setIsWhatsapp] = useState(true);
@@ -9,7 +10,6 @@ const SendMail = () => {
 
     const toggleForm = () => {
         setIsWhatsapp(!isWhatsapp);
-        // Reset form saat toggle
         setUsername('');
         setEmail('');
         setMessage('');
@@ -18,9 +18,29 @@ const SendMail = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (isWhatsapp) {
-
+            const whatsappURL = `https://wa.me/6283823115994?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
         } else {
-
+            const templateParams = {
+                from_name: username,
+                from_email: email,
+                message: message,
+                date: new Date().toLocaleString(), // Menambahkan tanggal otomatis
+            };
+            
+            emailjs.send(
+                "service_p81mx8d",
+                "template_4p17895",
+                templateParams,
+                "NQbIo-PDqit74_AyM"
+            )
+            .then(response => {
+                console.log("Email berhasil dikirim!", response.status, response.text);
+            })
+            .catch(error => {
+                console.error("Gagal mengirim email", error);
+            });
+            
         }
     };
 
@@ -83,11 +103,11 @@ const SendMail = () => {
                     type="submit"
                     className="w-full bg-zinc-950 flex gap-4 text-white py-2 rounded-sm hover:bg-zinc-800 transition-colors"
                 >
-                    <span className='ml-5'>   
+                    <span className='ml-5'>
                         {isWhatsapp ? <IconBrandWhatsapp /> : <IconBrandGmail />}
                     </span>
                     <span className='ml-5'>
-                    {isWhatsapp ? 'Send Whatsapp' : 'Send Gmail'}
+                        {isWhatsapp ? 'Send Whatsapp' : 'Send Gmail'}
                     </span>
 
                 </button>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const photos = [
     'images/logo/2.png',
@@ -18,10 +20,14 @@ const PhotoGrid = () => {
     const initialPhotos = photos.slice(0, 4); // Hanya tampilkan 4 foto awal
     const remainingPhotos = photos.slice(4); // Foto-foto berikutnya
 
+    useEffect(() => {
+        AOS.init()
+    })
+
 
     return (
         <div className="overflow-hidden relative lg:w-[73%] w-[90%] mt-5">
-            <div className="flex animate-scroll">
+            <div className="flex animate-scroll" data-aos="fade-up">
                 {initialPhotos.map((photo, index) => (
                     <div key={index} className="flex-shrink-0 w-48 h-48">
                         <img src={photo} alt={`Photo ${index}`} className="w-1/2 h-1/2 object-cover rounded-lg" />

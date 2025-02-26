@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const DetailProject = (props) => {
+        useEffect(() => {
+            AOS.init()
+        }, [])
     return (
-        <div className="mt-5 mb-2 p-5 bg-white shadow-md rounded-lg">
+        <div className="mt-5 mb-2 p-5 bg-white shadow-md rounded-lg" data-aos="fade-up">
             <h4 className="text-xl font-semibold text-gray-800">{props.title}</h4>
 
             <img src={props.image} className="w-full h-60 mt-5 object-cover rounded-md" alt={props.title} />

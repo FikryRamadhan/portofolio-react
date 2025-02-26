@@ -1,6 +1,13 @@
 import PhotoGrid from "../../Components/PhotoGrid";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {  useEffect } from "react";
 
 const Service = () => {
+
+    useEffect(() => {    
+            AOS.init()
+    })
     return (
         <>
             <div className="h-auto flex flex-col justify-start items-center relative overflow-hidden">
@@ -13,9 +20,9 @@ const Service = () => {
 
                 {/* Teks dengan margin atas yang lebih kecil */}
                 <div className="text-center relative rounded-lg mt-8">
-                    <h1 className="text-5xl font-bold mb-4 text-slate-100">Our Service</h1>
+                    <h1 className="text-5xl font-bold mb-4 text-slate-100" data-aos="zoom-in">Our Service</h1>
                     {/* Container untuk 3 card */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-5 lg:mx-40">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-5 lg:mx-40" data-aos="fade-up">
                         {/* Card 1 */}
                         <div className=" bg-zinc-950 bg-opacity-10 backdrop-blur-md p-6 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-semibold mb-4 text-slate-100">Web Developer</h3>

@@ -2,6 +2,8 @@ import { IconInbox, IconMenu2, IconX } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import SendMail from "./SendMail";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,12 +44,16 @@ const Navbar = () => {
     };
   }, [isOpen, isOpenSidebar]);
 
+  useEffect(() => {
+    AOS.init()
+  })
+
 
 
 
   return (
     <>
-      <section className="text-white">
+      <section className="text-white" data-aos="fade-down">
         <div
           id="nav"
           className="w-full lg:px-28 py-3 flex items-center justify-between backdrop-blur-lg fixed top-0 z-50 "
