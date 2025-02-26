@@ -1,6 +1,9 @@
 import { IconBrandGmail, IconBrandWhatsapp } from '@tabler/icons-react';
 import React, { useState } from 'react'
 import emailjs from "emailjs-com";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const SendMail = () => {
     const [isWhatsapp, setIsWhatsapp] = useState(true);
@@ -27,27 +30,33 @@ const SendMail = () => {
                 message: message,
                 date: new Date().toLocaleString(), // Menambahkan tanggal otomatis
             };
-            
+
             emailjs.send(
                 "service_p81mx8d",
                 "template_4p17895",
                 templateParams,
                 "NQbIo-PDqit74_AyM"
             )
-            .then(response => {
-                console.log("Email berhasil dikirim!", response.status, response.text);
-            })
-            .catch(error => {
-                console.error("Gagal mengirim email", error);
-            });
-            
+                .then(response => {
+                    console.log("Email berhasil dikirim!", response.status, response.text);
+                })
+                .catch(error => {
+                    console.error("Gagal mengirim email", error);
+                });
+
         }
     };
 
 
+    useEffect(() => {
+        AOS.init()
+    })
+
+
+
     return (
         <>
-            <form className="space-y-4 mt-20" onSubmit={handleSubmit}>
+            <form className="space-y-4 mt-20" onSubmit={handleSubmit} data-aos="fade-up">
                 <div className="flex content-start items-start mb-6">
                     <button
                         type="button"

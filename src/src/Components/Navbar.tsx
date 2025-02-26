@@ -98,6 +98,9 @@ const Navbar = () => {
               >
                 Portofolio
               </NavLink>
+              <button onClick={toggleSidebar} className="text-white cursor-pointer">
+                <IconInbox></IconInbox>
+              </button>
             </div>
           </div>
 
@@ -138,12 +141,12 @@ const Navbar = () => {
       </section>
 
       {isOpenSidebar && (
-        <div className="m-0 font-sans lg:hidden  transition-all duration-500 z-50">
+        <div className="m-0 font-sans   transition-all duration-500 z-50">
           <div
             ref={sidebarRef}
             className="fixed h-full w-[300px] top-0 bg-white shadow-xl transition-all duration-500 z-50 p-6 right-0"
           >
-            <div className="mt-20 mb-2">
+            <div className="mt-20 mb-2" data-aos="fade-up">
               <h4 className="text-xl">Let's Work Together!</h4>
               <p className="text-sm text-gray-600 mt-2">
                 I'm available for new opportunities and would love to contribute to your next project.
