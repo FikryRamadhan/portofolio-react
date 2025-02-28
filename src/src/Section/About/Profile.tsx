@@ -7,7 +7,7 @@ const Profile = () => {
         AOS.init()
     }, [])
     return (
-        <div className="min-h-screen bg-black text-white flex  items-center justify-center p-10 lg:p-30">
+        <div className="min-h-screen bg-black text-white flex  items-center justify-center p-10 overflow-hidden lg:p-30">
             <div className="gap-8 justify-center flex  flex-wrap-reverse lg:flex-wrap items-center px-6 lg:px-20">
                 {/* Konten Teks */}
                 <div className="w-full self-center lg:w-1/2 text-white">
