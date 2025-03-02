@@ -164,7 +164,7 @@ const dataProject = [
         details: {
             techStack: ["React.js", "Express.js", "Tailwind css"], 
             client: "Internal Development", 
-            repo: 'https://catalogify.vercel.app/app' ,
+            repo: 'https://catalogify.vercel.app/' ,
             description: "Project ini saya buat karena ingin membuat cebuah layanan katalog product untuk sebuah bidang teknologi."
         } 
     },
