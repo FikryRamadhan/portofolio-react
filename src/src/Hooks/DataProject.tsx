@@ -154,6 +154,20 @@ const dataProject = [
             description: "API untuk menyediakan layanan data yang dapat digunakan dalam berbagai aplikasi internal."
         } 
     },
+    { 
+        id: 11, 
+        title: "Catalogify", 
+        desc: "This Project E-Comerce for news and trend teknologies", 
+        type: "web", 
+        image: "/project/catalogify.png", 
+        createdAt: "2025-03-03",
+        details: {
+            techStack: ["React.js", "Express.js", "Tailwind css"], 
+            client: "Internal Development", 
+            repo: 'https://catalogify.vercel.app/app' ,
+            description: "Project ini saya buat karena ingin membuat cebuah layanan katalog product untuk sebuah bidang teknologi."
+        } 
+    },
 ];
 
 export default dataProject;
