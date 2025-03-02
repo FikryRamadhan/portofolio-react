@@ -155,9 +155,9 @@ const dataProject = [
         } 
     },
     { 
-        id: 11, 
+        id: 12, 
         title: "Catalogify", 
-        desc: "This Project E-Comerce for news and trend teknologies", 
+        desc: "This Project E-Commerce for news and trend teknologies", 
         type: "web", 
         image: "/project/catalogify.png", 
         createdAt: "2025-03-03",
